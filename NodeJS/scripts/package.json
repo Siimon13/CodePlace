@@ -1,0 +1,14 @@
+{
+  "name": "node-web-scrape",
+  "version": "0.0.1",
+  "description": "Scrape le web.",
+  "main": "server.js",
+  "author": "Scotch",
+  "dependencies": {
+    "cheerio": "latest",
+    "express": "latest",
+    "quagga": "^0.11.6",
+    "request": "latest",
+    "x-ray": "^2.3.2"
+  }
+}
