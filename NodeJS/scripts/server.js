@@ -3,9 +3,13 @@ var fs = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
 var app     = express();
+var wikipedia = require("node-wikipedia");
+
 
 app.get('/scrape', function(req, res){
 
+    
+    
     //All the web scraping magic will happen here
     // url = 'http://www.imdb.com/title/tt1229340/';
     url = 'http://www.digit-eyes.com/cgi-bin/digiteyes.cgi?upcCode=024463061095&action=lookupUpc&go=Go%21';
