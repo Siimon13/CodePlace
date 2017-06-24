@@ -1,0 +1,4 @@
+#!/bin/bash
+
+GOOGLE_PLACES_API_KEY=AIzaSyDAqYX5PuVVgAmGYNrLfZrmsEv0uDzX6wc GOOGLE_PLACES_OUTPUT_FORMAT=json nodemon app.js
+

@@ -1,0 +1,22 @@
+(function () {
+    "use strict";
+
+    var TextSearch = require("./lib/TextSearch.js");
+    
+    module.exports = function (apiKey, outputFormat) {
+        return {
+            placeSearch: new PlaceSearch(apiKey, outputFormat),
+            radarSearch: new RadarSearch(apiKey, outputFormat),
+            textSearch: new TextSearch(apiKey, outputFormat),
+            placeDetailsRequest: new PlaceDetailsRequest(apiKey, outputFormat),
+            placeAutocomplete: new PlaceAutocomplete(apiKey, outputFormat),
+            addEvent: new AddEvent(apiKey, outputFormat),
+            deleteEvent: new DeleteEvent(apiKey, outputFormat),
+            eventDetails: new EventDetails(apiKey, outputFormat),
+            imageFetch: new ImageFetch(apiKey),
+            nearBySearch: new NearBySearch(apiKey, outputFormat)
+
+        };
+    };
+
+})();
