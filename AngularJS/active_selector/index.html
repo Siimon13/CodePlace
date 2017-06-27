@@ -1,0 +1,16 @@
+<html>
+    <head>
+	<title>My AngularJS App</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="/app.js"></script>
+	<link rel="stylesheet" href="/style.css" >
+    </head>
+    <div ng-app='app' class="filters_ct" ng-controller="selectFilter">
+	<ul>
+            <li ng-repeat="filter in filters" ng-click="select(filter)" ng-class="{active: filter == tabs[selectedInd]}">
+		<span class="filters_ct_status"></span>
+		{{filter.time}}
+            </li>
+	</ul>
+    </div>
+</html>
