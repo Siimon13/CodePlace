@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Visitor Dashboard</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,900,100' rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
+    <script src="js/d3.js"></script>
+    <script src="js/react-with-addons-0.14.7.js"></script>
+    <script src="js/react-dom-0.14.7.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser-polyfill.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-63697603-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12" >
+            <div style="height:35px;text-align: center;" class="top">
+                <a style="font-size: .8em;" href="http://www.adeveloperdiary.com/d3-js/how-to-integrate-react-and-d3-the-right-way/"><h4 style="line-height:35px;color:rgb(125, 199, 244)">(React + D3) Click here to view the full tutorial on adeveloperdiary.com</h4></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12" >
+            <div class="top" id="top-line-chart">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="bottom-left" id="browser">
+
+            </div>
+        </div>
+        <div class="col-xs-5">
+            <div class="bottom-right" id="ret_visitors">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/babel" src="lib/charts/utils/SVGDefs.jsx"></script>
+<script src="lib/charts/utils/ReactMixins.js"></script>
+<script type="text/babel" src="lib/charts/DonutChart.jsx"></script>
+<script type="text/babel" src="lib/charts/ProgressChart.jsx"></script>
+<script type="text/babel" src="lib/charts/BarChart.jsx"></script>
+<script type="text/babel" src="lib/charts/LineChart.jsx"></script>
+<script type="text/babel" src="lib/app.jsx"></script>
+
+</body>
+</html>
