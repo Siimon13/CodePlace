@@ -62,11 +62,11 @@ num = "646"
 ans = recursePhoneNum(num)
 
 print(len(ans))
-Node = {
-        left : None,
-        right : None,
-        value : None
-}
+# Node = {
+#         left : None,
+#         right : None,
+#         value : None
+# }
 
 def serializeTree(root, anslst):
         if (root == None):
@@ -93,3 +93,49 @@ def deserializeTree(anslst):
 
         return root
 
+
+
+class Visiter(object):
+        def __init__(self):
+                """Return a new Visiter object."""
+                self.TurnOnRoom = False
+
+class Counter(object):
+        def __init__(self):
+                """Return a new Counter object."""
+                self.count = 1
+
+
+def prisonSim(num_prisoners):
+        from random import randint
+
+        rand_ind = randint(0, num_prisoners-1)
+
+        ListofPrisoner = [Visiter() for i in range(num_prisoners)]
+
+        ListofPrisoner[rand_ind] = Counter()
+        visited = 0
+        roomState = False #True when light is on, false when not
+        
+        while(visited != num_prisoners):
+                rand_selected = randint(0, num_prisoners-1)
+                selected = ListofPrisoner[rand_selected]
+
+                if isinstance(selected, Visiter):
+                        print("Visiter!!")
+                        if (not selected.TurnOnRoom and not roomState):
+                                roomState = True
+                                selected.TurnOnRoom = True
+                else:
+                        print("Counter!!")
+                        if(roomState):
+                                roomState = False
+                                selected.count += 1
+                        visited = selected.count
+                        
+                print (visited);
+                input()
+        
+
+
+prisonSim(5)
