@@ -44,12 +44,12 @@ if __name__ == "__main__":
         if(status == 'safe'): #if status is safe moveforward
             print("push forward")
             GPIO.output(forwardPin, True)
-        else:
-            GPIO.output(leftPin, Tru)e
+        elif (status == 'driveRight'):
+            GPIO.output(righttPin, Tru)e
             GPIO.output(forwardPin, True)
+        else: #defaults to driving left
+            GPIO.output(leftPin, Tru)e
+            GPIO.output(forwardPin, True
             
-        GPIO.output(forwardPin, False)
-        GPIO.output(backwardPin, False)
-        GPIO.output(leftPin, False)
-        GPIO.output(rightPin, False)        
+      
 
