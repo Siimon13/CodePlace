@@ -4,4 +4,4 @@
 select * from pg_stat_activity where state = 'active';
 
 #### Stop a PG Process
-select pg_cancel_backend(<pid>)
+select pg_cancel_backend(`<pid`>)
