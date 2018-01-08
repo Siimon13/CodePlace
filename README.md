@@ -1,2 +1,2 @@
 # CodePlace
-A place to play with codes
+A rep to store all my (!)useful codes
