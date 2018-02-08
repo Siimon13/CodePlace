@@ -105,3 +105,6 @@ hs_err_pid*
 *~
 #Package Lock
 package-lock.json
+
+#Data Dir
+data/
