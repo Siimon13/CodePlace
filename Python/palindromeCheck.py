@@ -1,5 +1,9 @@
 import unittest
 
+def isAlphaNum(char):
+    return (char >= 'a' and char <= 'z') or ( char >= 'A' and char <= 'Z' ) or ( char >= '0' and char <= '9')
+
+
 def checkPalindrome(wordToCheck):
     halfLenOfWord = len(wordToCheck) // 2
         
@@ -21,7 +25,7 @@ def checkPalindrome(wordToCheck):
     j = len(wordToCheck) - 1
         
     while (j > i):
-        if not wordToCheck[i].isalnum():
+        if not isAlphaNum(wordToCheck[i]):
             i+=1
             continue
 
